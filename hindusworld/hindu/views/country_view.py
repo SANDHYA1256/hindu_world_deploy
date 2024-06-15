@@ -14,6 +14,7 @@ class CountryView(viewsets.ModelViewSet):
     def list(self, request, *args, **kwargs):
         cache_key = 'countries_list'
         cached_data = cache.get(cache_key)
+        print("siva")
 
         if cached_data is not None:
             # Add field indicating data is from cache
